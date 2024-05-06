@@ -26,6 +26,8 @@ const tempoobjtivo4 = new Date("2025-02-01T00:00:00");
 const tempos = [tempoobjtivo1,tempoobjtivo2,tempoobjtivo3,tempoobjtivo4];
 
 
+contadores[0].textContent = calculaTempo(tempos[0]);
+
 function calculaTempo(tempoobjtivo){
   let tempoAtual = new Date();
   let tempoFinal = tempoobjtivo - tempoAtual;
@@ -37,6 +39,8 @@ function calculaTempo(tempoobjtivo){
   segundos %= 60;
   minutos %= 60;
   horas %= 24;
+
+  
 if (tempoFinal > 0){
   return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos ";  
 }else{
